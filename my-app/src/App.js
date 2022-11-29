@@ -65,8 +65,17 @@ function App() {
 
 
    
+const [state,setState]=useState(10)
+function handlechage(){
+setState((prev)=>{
+return setTimeout(()=>{
+console.log("Hello",prev);
+return prev+1
+},3000)
 
-
+})
+console.log("hi")
+}
   return (
     <div className="App">
     {/* <h1>{val}</h1>
@@ -78,13 +87,15 @@ function App() {
     
     </div> */}
 
-  {/* <Showcards propsData={Data}/>  */}
+  <Showcards propsData={Data}/> 
   {/* <UseEffect/> */}
 
 
 
   {/* <CustomHooks/> */}
-  <ClassComponent/>
+  {/* <ClassComponent/> */}
+  {/* <h1>{state}</h1>
+  <button onClick={handlechage}>Add</button> */}
   </div>
   );
 }

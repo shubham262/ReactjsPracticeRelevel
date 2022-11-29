@@ -7,8 +7,8 @@ const Showcards = (props) => {
 
 {
 
-props.propsData.item.map((i)=>(
-  <Cards loaction={i.loaction} price={i.price} src={i.src} time={i.time} hoisted={i.hoisted} />
+props.propsData.item.map((i,index)=>(
+  <Cards loaction={i.loaction} price={i.price} src={i.src} time={i.time} hoisted={i.hoisted} key={index}/>
 ))
 
 
