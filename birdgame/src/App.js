@@ -2,6 +2,7 @@ import {useState,useEffect} from "react"
 import './App.css';
 import Obstacle from './Obstacle';
 import Bird from "./Bird"
+import Tets from "./tets";
 
 const gameWidth=700
 const gameHeight=400
@@ -14,6 +15,7 @@ function App() {
   const [obstacleLeft,setObstacleleft]=useState(gameWidth-40)
   const [birdpostion,setBirdpostion]=useState(200)
   const [gamestarted,setGamestarted]=useState(false)
+  const [score,setScore]=useState(0)
   //obstacl;e
  useEffect(() => {
   let timeid;
@@ -25,6 +27,7 @@ function App() {
   else{
     setObstacleleft(gameWidth-40)
     setObstacle(Math.floor(Math.random()*(gameHeight-obstacleGap)))
+    setScore((prev)=>prev+1)
   }
 
   return ()=>{
@@ -63,12 +66,20 @@ function handleClick(){
 }
 
   return (
-    <div className="App" onClick={handleClick}>
-      <div className='gamebox'>
-      <Obstacle height={obstacleHeight} top={0} left={obstacleLeft}/>
-      <Obstacle height={bottomObstacleHight} left={obstacleLeft} top={gameHeight-(obstacleHeight+bottomObstacleHight)}/>
-      <Bird top={birdpostion}/>
-      </div>
+    // <div className="App" onClick={handleClick}>
+    // <h1>{score}</h1>
+    //   <div className='gamebox'>
+      
+    //   <Obstacle height={obstacleHeight} top={0} left={obstacleLeft}/>
+    //   <Obstacle height={bottomObstacleHight} left={obstacleLeft} top={gameHeight-(obstacleHeight+bottomObstacleHight)}/>
+    //   <Bird top={birdpostion}/>
+    //   </div>
+    // </div>
+    <div>
+      <Tets lang="php"/>
+      <Tets lang="React"/>
+      <Tets lang="java"/>
+
     </div>
   );
 }

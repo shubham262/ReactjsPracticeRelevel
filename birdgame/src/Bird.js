@@ -3,8 +3,8 @@ import React from 'react'
 const Bird = (props) => {
 
     let customStyle={
-        width:"40px",
-        height:"40px",
+        width:"20px",
+        height:"20px",
         backgroundColor:"green",
         borderRadius:"50%",
         position:"absolute",
@@ -19,7 +19,7 @@ const Bird = (props) => {
 
   return (
     <div style={customStyle}>
-        <img style={cstyle} src="https://media.tenor.com/WuaZ4G33BBoAAAAC/flappy-bird-flying.gif" alt="flsappy"   />
+        {/* <img style={cstyle} src="https://media.tenor.com/WuaZ4G33BBoAAAAC/flappy-bird-flying.gif" alt="flsappy"   /> */}
     </div>
   )
 }
